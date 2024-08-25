@@ -1,0 +1,102 @@
+./unit1/unit1.py:!apt install swig cmake
+
+./unit1/unit1.py:!pip install -r https://raw.githubusercontent.com/huggingface/deep-rl-class/main/notebooks/unit1/requirements-unit1.txt
+
+./unit1/unit1.py:!sudo apt-get update
+./unit1/unit1.py:!sudo apt-get install -y python3-opengl
+./unit1/unit1.py:!apt install ffmpeg
+./unit1/unit1.py:!apt install xvfb
+./unit1/unit1.py:!pip3 install pyvirtualdisplay
+./unit2/unit2.py:!pip install -r https://raw.githubusercontent.com/huggingface/deep-rl-class/main/notebooks/unit2/requirements-unit2.txt
+./unit2/unit2.py:!sudo apt-get update
+./unit2/unit2.py:!sudo apt-get install -y python3-opengl
+./unit2/unit2.py:!apt install ffmpeg xvfb
+./unit2/unit2.py:!pip3 install pyvirtualdisplay
+./unit6/unit6.py:!apt install python-opengl
+./unit6/unit6.py:!apt install ffmpeg
+./unit6/unit6.py:!apt install xvfb
+./unit6/unit6.py:!pip3 install pyvirtualdisplay
+./unit6/unit6.py:!pip install stable-baselines3[extra]
+./unit6/unit6.py:!pip install gymnasium
+./unit6/unit6.py:!pip install huggingface_sb3
+./unit6/unit6.py:!pip install huggingface_hub
+./unit6/unit6.py:!pip install panda_gym
+./unit6/unit6.py:!git config --global credential.helper store
+./unit5/unit5.py:!git clone --depth 1 https://github.com/Unity-Technologies/ml-agents
+./unit5/unit5.py:!pip3 install -e ./ml-agents-envs
+./unit5/unit5.py:!pip3 install -e ./ml-agents
+./unit5/unit5.py:!mkdir ./training-envs-executables
+./unit5/unit5.py:!mkdir ./training-envs-executables/linux
+./unit5/unit5.py:!wget "https://github.com/huggingface/Snowball-Target/raw/main/SnowballTarget.zip" -O ./training-envs-executables/linux/SnowballTarget.zip
+./unit5/unit5.py:!unzip -d ./training-envs-executables/linux/ ./training-envs-executables/linux/SnowballTarget.zip
+./unit5/unit5.py:!chmod -R 755 ./training-envs-executables/linux/SnowballTarget
+./unit5/unit5.py:!mlagents-learn ./config/ppo/SnowballTarget.yaml --env=./training-envs-executables/linux/SnowballTarget/SnowballTarget --run-id="SnowballTarget1" --no-graphics
+./unit5/unit5.py:!mlagents-push-to-hf --run-id="SnowballTarget1" --local-dir="./results/SnowballTarget1" --repo-id="ThomasSimonini/ppo-SnowballTarget" --commit-message="First Push"
+./unit5/unit5.py:!mlagents-push-to-hf  --run-id= # Add your run id  --local-dir= # Your local dir  --repo-id= # Your repo id  --commit-message= # Your commit message
+./unit5/unit5.py:!wget "https://huggingface.co/spaces/unity/ML-Agents-Pyramids/resolve/main/Pyramids.zip" -O ./training-envs-executables/linux/Pyramids.zip
+./unit5/unit5.py:!unzip -d ./training-envs-executables/linux/ ./training-envs-executables/linux/Pyramids.zip
+./unit5/unit5.py:!chmod -R 755 ./training-envs-executables/linux/Pyramids/Pyramids
+./unit5/unit5.py:!mlagents-learn ./config/ppo/PyramidsRND.yaml --env=./training-envs-executables/linux/Pyramids/Pyramids --run-id="Pyramids Training" --no-graphics
+./unit5/unit5.py:!mlagents-push-to-hf  --run-id= # Add your run id  --local-dir= # Your local dir  --repo-id= # Your repo id  --commit-message= # Your commit message
+./unit8/unit8_part1.py:!pip install setuptools==65.5.0
+./unit8/unit8_part1.py:!apt install python-opengl
+./unit8/unit8_part1.py:!apt install ffmpeg
+./unit8/unit8_part1.py:!apt install xvfb
+./unit8/unit8_part1.py:!apt install swig cmake
+./unit8/unit8_part1.py:!pip install pyglet==1.5
+./unit8/unit8_part1.py:!pip3 install pyvirtualdisplay
+./unit8/unit8_part1.py:!pip install gym==0.22
+./unit8/unit8_part1.py:!pip install imageio-ffmpeg
+./unit8/unit8_part1.py:!pip install huggingface_hub
+./unit8/unit8_part1.py:!pip install gym[box2d]==0.22
+./unit8/unit8_part1.py:!git config --global credential.helper store
+./unit8/unit8_part1.py:!python ppo.py --env-id="LunarLander-v2" --repo-id="YOUR_REPO_ID" --total-timesteps=50000
+./unit8/unit8_part2.py:!pip install faster-fifo==1.4.2
+./unit8/unit8_part2.py:!pip install vizdoom
+./unit8/unit8_part2.py:!pip install sample-factory==2.0.2
+./unit8/unit8_part2.py:!git config --global credential.helper store
+./unit8/unit8_part2.py:!python -m sample_factory.huggingface.load_from_hub -r edbeeching/doom_health_gathering_supreme_2222 -d ./train_dir
+./unit8/unit8_part2.py:!ls train_dir/doom_health_gathering_supreme_2222
+./unit8/unit8_part2.py:!python -m sample_factory.huggingface.load_from_hub -r edbeeching/doom_deathmatch_bots_2222 -d ./train_dir
+./unit4/unit4.py:!apt install python-opengl
+./unit4/unit4.py:!apt install ffmpeg
+./unit4/unit4.py:!apt install xvfb
+./unit4/unit4.py:!pip install pyvirtualdisplay
+./unit4/unit4.py:!pip install pyglet==1.5.1
+./unit4/unit4.py:!pip install -r https://raw.githubusercontent.com/huggingface/deep-rl-class/main/notebooks/unit4/requirements-unit4.txt
+./unit3/unit3.py:!pip install git+https://github.com/DLR-RM/rl-baselines3-zoo
+./unit3/unit3.py:!apt-get install swig cmake ffmpeg
+./unit3/unit3.py:!pip install gymnasium[atari]
+./unit3/unit3.py:!pip install gymnasium[accept-rom-license]
+./unit3/unit3.py:!apt install python-opengl
+./unit3/unit3.py:!apt install xvfb
+./unit3/unit3.py:!pip3 install pyvirtualdisplay
+./unit3/unit3.py:!python -m rl_zoo3.train --algo ________ --env SpaceInvadersNoFrameskip-v4  -f _________  -c _________
+./unit3/unit3.py:!python -m rl_zoo3.train --algo dqn  --env SpaceInvadersNoFrameskip-v4 -f logs/ -c dqn.yml
+./unit3/unit3.py:!python -m rl_zoo3.enjoy  --algo dqn  --env SpaceInvadersNoFrameskip-v4  --no-render  --n-timesteps _________  --folder logs/
+./unit3/unit3.py:!python -m rl_zoo3.enjoy  --algo dqn  --env SpaceInvadersNoFrameskip-v4  --no-render  --n-timesteps 5000  --folder logs/
+./unit3/unit3.py:!git config --global credential.helper store
+./unit3/unit3.py:!python -m rl_zoo3.push_to_hub  --algo dqn  --env SpaceInvadersNoFrameskip-v4  --repo-name _____________________ -orga _____________________ -f logs/
+./unit3/unit3.py:!python -m rl_zoo3.push_to_hub  --algo dqn  --env SpaceInvadersNoFrameskip-v4  --repo-name dqn-SpaceInvadersNoFrameskip-v4  -orga ThomasSimonini  -f logs/
+./unit3/unit3.py:!python -m rl_zoo3.load_from_hub --algo dqn --env BeamRiderNoFrameskip-v4 -orga sb3 -f rl_trained/
+./unit3/unit3.py:!python -m rl_zoo3.enjoy --algo dqn --env BeamRiderNoFrameskip-v4 -n 5000  -f rl_trained/ --no-render
+./bonus-unit1/bonus-unit1.py:!git clone --depth 1 https://github.com/Unity-Technologies/ml-agents
+./bonus-unit1/bonus-unit1.py:!pip3 install -e ./ml-agents-envs
+./bonus-unit1/bonus-unit1.py:!pip3 install -e ./ml-agents
+./bonus-unit1/bonus-unit1.py:!mkdir ./trained-envs-executables
+./bonus-unit1/bonus-unit1.py:!mkdir ./trained-envs-executables/linux
+./bonus-unit1/bonus-unit1.py:!wget "https://github.com/huggingface/Huggy/raw/main/Huggy.zip" -O ./trained-envs-executables/linux/Huggy.zip
+./bonus-unit1/bonus-unit1.py:!unzip -d ./trained-envs-executables/linux/ ./trained-envs-executables/linux/Huggy.zip
+./bonus-unit1/bonus-unit1.py:!chmod -R 755 ./trained-envs-executables/linux/Huggy
+./bonus-unit1/bonus-unit1.py:!mlagents-learn ./config/ppo/Huggy.yaml --env=./trained-envs-executables/linux/Huggy/Huggy --run-id="Huggy2" --no-graphics
+./bonus-unit1/bonus-unit1.py:!mlagents-push-to-hf --run-id="HuggyTraining" --local-dir="./results/Huggy2" --repo-id="ThomasSimonini/ppo-Huggy" --commit-message="Huggy"
+./bonus-unit1/bonus_unit1.py:!git clone --depth 1 https://github.com/Unity-Technologies/ml-agents
+./bonus-unit1/bonus_unit1.py:!pip3 install -e ./ml-agents-envs
+./bonus-unit1/bonus_unit1.py:!pip3 install -e ./ml-agents
+./bonus-unit1/bonus_unit1.py:!mkdir ./trained-envs-executables
+./bonus-unit1/bonus_unit1.py:!mkdir ./trained-envs-executables/linux
+./bonus-unit1/bonus_unit1.py:!wget "https://github.com/huggingface/Huggy/raw/main/Huggy.zip" -O ./trained-envs-executables/linux/Huggy.zip
+./bonus-unit1/bonus_unit1.py:!unzip -d ./trained-envs-executables/linux/ ./trained-envs-executables/linux/Huggy.zip
+./bonus-unit1/bonus_unit1.py:!chmod -R 755 ./trained-envs-executables/linux/Huggy
+./bonus-unit1/bonus_unit1.py:!mlagents-learn ./config/ppo/Huggy.yaml --env=./trained-envs-executables/linux/Huggy/Huggy --run-id="Huggy2" --no-graphics
+./bonus-unit1/bonus_unit1.py:!mlagents-push-to-hf --run-id="HuggyTraining" --local-dir="./results/Huggy2" --repo-id="ThomasSimonini/ppo-Huggy" --commit-message="Huggy"
